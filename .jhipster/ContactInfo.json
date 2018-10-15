@@ -1,0 +1,28 @@
+{
+    "name": "ContactInfo",
+    "fields": [
+        {
+            "fieldName": "websiteURL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "facebookURL",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twitterURL",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181015061958",
+    "entityTableName": "contact_info",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "doctor",
+    "applications": "*",
+    "microserviceName": "doctor"
+}

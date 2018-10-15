@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Doctor.
+    -->
+    <changeSet id="20181015061955-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="profile_info_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_profile_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="profile_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="location_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_location_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="location"/>
+
+        <addForeignKeyConstraint baseColumnNames="contact_info_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_contact_info_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="contact_info"/>
+
+        <addForeignKeyConstraint baseColumnNames="doctor_settings_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_doctor_settings_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="doctor_settings"/>
+
+        <addForeignKeyConstraint baseColumnNames="workspace_id"
+                                 baseTableName="doctor"
+                                 constraintName="fk_doctor_workspace_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="workspace"/>
+
+    </changeSet>
+</databaseChangeLog>

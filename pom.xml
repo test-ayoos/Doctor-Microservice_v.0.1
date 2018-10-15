@@ -340,7 +340,7 @@
             <scope>test</scope>
         </dependency>
         <!-- Kafka support -->
-        <dependency>
+       <!--  <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream</artifactId>
         </dependency>
@@ -352,7 +352,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-stream-test-support</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.zalando</groupId>
             <artifactId>problem-spring-web</artifactId>

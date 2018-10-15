@@ -1,0 +1,43 @@
+{
+    "name": "DoctorSessionInfo",
+    "fields": [
+        {
+            "fieldName": "sessionName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "startTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "endTime",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "interval",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20181015061959",
+    "entityTableName": "doctor_session_info",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "doctor",
+    "applications": "*",
+    "microserviceName": "doctor"
+}

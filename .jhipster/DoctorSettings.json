@@ -1,0 +1,37 @@
+{
+    "name": "DoctorSettings",
+    "fields": [
+        {
+            "fieldName": "approvalType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "isMailNotificationsEnabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isSMSNotificationsEnabled",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "paymentSettings",
+            "otherEntityName": "paymentSettings",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctorSettings"
+        }
+    ],
+    "changelogDate": "20181015062003",
+    "entityTableName": "doctor_settings",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "doctor",
+    "applications": "*",
+    "microserviceName": "doctor"
+}

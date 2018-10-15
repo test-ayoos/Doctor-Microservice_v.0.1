@@ -1,0 +1,20 @@
+{
+    "name": "Workspace",
+    "fields": [
+        {
+            "fieldName": "workspaceId",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181015061957",
+    "entityTableName": "workspace",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "doctor",
+    "applications": "*",
+    "microserviceName": "doctor"
+}

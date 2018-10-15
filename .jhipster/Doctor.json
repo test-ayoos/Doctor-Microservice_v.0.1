@@ -1,0 +1,79 @@
+{
+    "name": "Doctor",
+    "fields": [
+        {
+            "fieldName": "specialisation",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "image",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "image"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "profileInfo",
+            "otherEntityName": "profileInfo",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "location",
+            "otherEntityName": "location",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "contactInfo",
+            "otherEntityName": "contactInfo",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "doctorSettings",
+            "otherEntityName": "doctorSettings",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "workspace",
+            "otherEntityName": "workspace",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "javadoc": "A relationship",
+            "relationshipName": "doctorSessionInfo",
+            "otherEntityName": "doctorSessionInfo",
+            "otherEntityRelationshipName": "doctor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "reservedSlot",
+            "otherEntityName": "reservedSlot",
+            "otherEntityRelationshipName": "doctor"
+        }
+    ],
+    "changelogDate": "20181015061955",
+    "entityTableName": "doctor",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "doctor",
+    "applications": "*",
+    "microserviceName": "doctor"
+}

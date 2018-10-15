@@ -1,0 +1,101 @@
+
+
+entity Doctor {
+  
+    specialisation String,
+	image ImageBlob
+}
+entity ProfileInfo {
+  profileName String,
+  phoneNumber String,
+  firstName String,
+  lastName  String,
+  email  String,
+  imageUrl String,
+  image ImageBlob
+  
+  
+
+}
+entity Workspace{
+	id String,
+	workspaceId String
+}
+
+entity ContactInfo{
+    websiteURL String,
+	facebookURL String,
+	twitterURL String
+}
+
+
+entity DoctorSessionInfo{
+    sessionName  String,
+    date LocalDate,
+    startTime ZonedDateTime,
+	endTime ZonedDateTime,
+	interval ZonedDateTime
+}
+
+entity Location {
+    latitude Double,
+    longitude Double
+}
+
+entity ReservedSlot{
+	date LocalDate,
+	startTime ZonedDateTime,
+	endTime ZonedDateTime
+}
+
+entity SlotStatus {
+    status String
+}
+
+entity DoctorSettings{
+  approvalType String,
+  isMailNotificationsEnabled Boolean,
+  isSMSNotificationsEnabled Boolean
+}
+entity PaymentSettings{
+  isPaymentEnabled Boolean ,
+  amount  Double,
+  paymentMethod String,
+  currency String,
+  intent String,
+  noteToPayer String,
+  paymentGatewayProvider String,
+  paymentGatewayCredentials String
+}
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+
+	/**
+	* A relationship
+	*/
+	Doctor{doctorSessionInfo} to DoctorSessionInfo,
+    Doctor{reservedSlot} to ReservedSlot
+}
+
+
+
+relationship OneToOne {
+Doctor{profileInfo} to ProfileInfo,
+    DoctorSettings{paymentSettings} to PaymentSettings,
+	Doctor{location} to Location,
+	Doctor{contactInfo} to ContactInfo,
+
+    Doctor{doctorSettings} to DoctorSettings,
+	Doctor{workspace} to Workspace
+}
+
+relationship ManyToOne{
+	    ReservedSlot{slotStatus} to SlotStatus
+}
+
+dto * with mapstruct
+
+paginate * with pagination
+
+
+service all with serviceImpl

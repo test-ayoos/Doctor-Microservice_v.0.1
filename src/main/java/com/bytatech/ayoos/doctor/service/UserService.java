@@ -52,6 +52,15 @@ public class UserService {
         this.cacheManager = cacheManager;
     }
 
+    
+    
+    public String getCurrentUserLogin() {
+    	Optional<String> currentUser=SecurityUtils.getCurrentUserLogin();
+    	return currentUser.get();
+    }
+    
+    
+    
     /**
      * Update basic information (first name, last name, email, language) for the current user.
      *
@@ -70,6 +79,10 @@ public class UserService {
                 user.setEmail(email.toLowerCase());
                 user.setLangKey(langKey);
                 user.setImageUrl(imageUrl);
+                
+                
+                System.out.println(">>>>>>>>>>>>>>>>>>>"+user);
+                
                 userSearchRepository.save(user);
                 this.clearUserCaches(user);
                 log.debug("Changed Information for User: {}", user);

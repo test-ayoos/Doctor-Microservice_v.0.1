@@ -1,0 +1,48 @@
+{
+    "name": "PaymentSettings",
+    "fields": [
+        {
+            "fieldName": "isPaymentEnabled",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "paymentMethod",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "currency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "intent",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "noteToPayer",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentGatewayProvider",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "paymentGatewayCredentials",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20181015062004",
+    "entityTableName": "payment_settings",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "doctor",
+    "applications": "*",
+    "microserviceName": "doctor"
+}
